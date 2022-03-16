@@ -30,7 +30,7 @@ i{
 .search-area {
   flex: 1;
   min-width: 525px;
-  padding: 0 2rem;
+  padding: 0 3rem;
 }
 
 .logo-wrapper,
@@ -95,7 +95,7 @@ i{
 }
 
 .pre-nav-wrapper {
-  height: 50px;
+  height: 60px;
 
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@ i{
 }
 
 .pre-nav-wrapper .links .link {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 900;
   color: var(--blue-400);
   text-decoration: none;
@@ -135,6 +135,20 @@ i{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.pos-nav-wrapper .hamb-button {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 30px;
+}
+
+.pos-nav-wrapper .hamb-line {
+  width: 100%;
+  height: 2.5px;
+  border-radius: 0.5rem;
+  background: #fff;
 }
 
 .acessibility-wrapper {
@@ -166,6 +180,66 @@ i{
   width: 100%;
   max-width: 1150px;
   margin: 0 auto;
+
+  
+}
+
+#main-container section {
+  margin: 2rem 0;
+}
+
+.section-heading {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.section-heading .section-title {
+  display: inline-block;
+
+  font-size: 2.5rem;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 900;
+  color: var(--blue-600);
+  
+  text-transform: uppercase;
+  
+  position: relative;
+}
+
+.section-heading .section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:  50%;
+  height: 4px;
+  background: var(--cian-200);
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  height: fit-content;
+  gap: 1rem;
+  
+}
+
+.service-card{
+  width: 100%;
+  max-width: 260px;
+  height: 240px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.service-link img {
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
 }
 
 

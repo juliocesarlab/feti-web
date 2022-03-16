@@ -2,12 +2,15 @@
 <html>
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Titillium+Web:wght@700;900&display=swap" rel="stylesheet"> 
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="styles/slider.css">
     <link rel="stylesheet" href="styles/style.css">
 
     <title>FETI - iniciação profissional</title>
@@ -45,7 +48,11 @@
         <section class="pos-nav">
           <div class="pos-nav-wrapper">
             <div class="hamb-button-wrapper">
-              <i class="fas fa-bars"></i>
+              <div class="hamb-button">
+                <span class="hamb-line"></span>
+                <span class="hamb-line"></span>
+                <span class="hamb-line"></span>
+              </div>
             </div>
 
             <div class="acessibility-wrapper">
@@ -64,8 +71,77 @@
     </nav>
 
     <main id="main-container">
-      
+      <section class="services">
+        <div class="section-heading">
+          <h1 class="section-title">Serviços</h1>
+        </div>
+
+        <div class="section-body">
+          <div class="services-container">
+            <div class="service-card">
+              <a class="service-link">
+                <img src="./assets/service-inp.png" alt="iniciação profissional">
+              </a>
+            </div>
+            <div class="service-card">
+              <a class="service-link">
+                <img src="./assets/service-jovem-ap.png" alt="jovem aprendiz">
+              </a>
+            </div>
+            <div class="service-card">
+              <a class="service-link">
+                <img src="./assets/service-emp.png" alt="empresas">
+              </a>
+            </div>
+            <div class="service-card">
+              <a class="service-link">
+                <img src="./assets/service-pcd.png" alt="pcd">
+              </a>
+            </div>
+            <div class="service-card">
+              <a class="service-link">
+                <img src="./assets/service-volun.png" alt="voluntario ou doador">
+              </a>
+            </div>
+            <div class="service-card">
+              <a class="service-link">
+                <img src="./assets/service-fale.png" alt="fale conosco">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slider-section">
+        <div class="slideshow-container">
+          <div class="slide">
+            <img src="./assets/banner.jpg" >
+          </div>
+          <div class="slide">
+            <img src="./assets/caixa.jpg" >
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </section>
+
+      <section class="news">
+        <div class="section-heading">
+          <h1 class="section-title">Notícias</h1>
+        </div>
+        <div class="news-card">
+          <div class="img-wrapper">
+            <img src="" alt="noticia">
+          </div>
+          <div class="news-details">
+            <span>13/03/2022</span>
+            <h3>titulo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quaerat?</p>
+          </div>
+        </div>
+      </section>
     </main>
+
     <script src="https://kit.fontawesome.com/710ee36645.js" crossorigin="anonymous"></script>
+    <script src="./scripts/slider.js"></script>
   </body>
 </html
