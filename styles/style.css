@@ -8,6 +8,7 @@
   --blue-600: #001859;
   --blue-400: #00216c;
   --cian-200: #00bef2;
+  --white-200: #eeeeee;
 }
 
 body {
@@ -19,18 +20,21 @@ i{
   cursor: pointer;
 }
 
+
+
 .main-nav {
   height: 200px;
 
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .logo-area,
 .search-area {
   flex: 1;
   min-width: 525px;
-  padding: 0 3rem;
+  padding: 0 2rem;
 }
 
 .logo-wrapper,
@@ -131,6 +135,7 @@ i{
   height: 60px;
 
   margin: 0 auto;
+  padding:0 2rem;
 
   display: flex;
   justify-content: space-between;
@@ -140,8 +145,12 @@ i{
 .pos-nav-wrapper .hamb-button {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 0.5rem;
   width: 30px;
+
+  cursor: pointer;
 }
 
 .pos-nav-wrapper .hamb-line {
@@ -155,6 +164,11 @@ i{
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.hamb-button:hover .hamb-line{
+  background-color: var(--blue-600);
+  cursor: pointer;
 }
 
 .pos-nav-wrapper i:hover, span:hover{
@@ -180,8 +194,7 @@ i{
   width: 100%;
   max-width: 1150px;
   margin: 0 auto;
-
-  
+  padding: 0 2rem;
 }
 
 #main-container section {
@@ -197,7 +210,7 @@ i{
   display: inline-block;
 
   font-size: 2.5rem;
-  font-family: 'Titillium Web', sans-serif;
+ 
   font-weight: 900;
   color: var(--blue-600);
   
@@ -242,6 +255,59 @@ i{
   transform: scale(1.1);
 }
 
+.news .section-body{
+  display: flex;
+  gap: 2rem;
+}
+
+.news .news-card {
+  height: 500px;
+  width: 560px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--white-200)
+}
+
+.news-details,
+.news-image{
+  flex: 1;
+}
+
+
+.news-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 280px;
+}
+
+.news-details {
+  font-family: 'Titillium Web', sans-serif;;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.news-details span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--cian-200);
+}
+
+.news-details h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--blue-600);
+}
+
+.news-details p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--blue-400);
+}
 
 
 
