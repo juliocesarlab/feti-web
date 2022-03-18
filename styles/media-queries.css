@@ -65,12 +65,20 @@
     max-width: 100px;
   }
 
-  footer .adress {
-    height: 500px;
+  section.address{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
   }
 
   footer .address-section-wrapper {
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .address-section-wrapper .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

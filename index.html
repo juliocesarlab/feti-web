@@ -17,26 +17,28 @@
     <title>FETI - iniciação profissional</title>
   </head>
   <body>
-    <aside class="mobile-menu">
-      <div class="close-menu-button">
-        <i class="fas fa-times-circle"></i>
-      </div>
-      <div class="mobile-menu-wrapper">
-        
-        <div class="links">
-          <a href="#" class="link">Sobre Nós</a>
-          <a href="#" class="link">Notícias</a>
-          <a href="#" class="link">Editais</a>
-          <a href="#" class="link">Legislação</a>
-          <a href="#" class="link">Quadro colaborativo</a>
-          <a href="#" class="link">Contato</a>
+    <div class="overlay">
+      <aside class="mobile-menu">
+        <div class="close-menu-button">
+          <i class="fas fa-times-circle"></i>
         </div>
-      </div>
-    </aside>
+        <div class="mobile-menu-wrapper">
+          
+          <div class="links">
+            <a href="#" class="link">Sobre Nós</a>
+            <a href="#" class="link">Notícias</a>
+            <a href="#" class="link">Editais</a>
+            <a href="#" class="link">Legislação</a>
+            <a href="#" class="link">Quadro colaborativo</a>
+            <a href="#" class="link">Contato</a>
+          </div>
+        </div>
+      </aside>
+    </div>
     <nav>
         <section class="pre-nav">
           <div class="pre-nav-wrapper">
-            <div class="links">
+            <div class="links bg-element">
               <a href="#" class="link">Sobre Nós</a>
               <a href="#" class="link">Notícias</a>
               <a href="#" class="link">Editais</a>
@@ -75,9 +77,9 @@
             <div class="acessibility-wrapper">
               <div class="font-size-adjust">
                 <span>Acessibilidade</span>
-                <span>-A</span>
-                <span>A</span>
-                <span>+A</span>
+                <span id="smallFontSize">-A</span>
+                <span id="regularFontSize">A</span>
+                <span id="bigFontSize">+A</span>
               </div>
               <div class="theme-adjust">
                 <i class="fas fa-toggle-off"></i>
@@ -265,6 +267,7 @@
       </section>
     </footer>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/acessiblity.js"></script>
     <script src="https://kit.fontawesome.com/710ee36645.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./scripts/swiper.js"></script>

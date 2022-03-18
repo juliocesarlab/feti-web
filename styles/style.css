@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: color, background-color 1s;;
 }
 
 :root {
@@ -94,8 +95,8 @@ img{
   color: #fff;
   
   position: absolute;
-  right: 2rem;
-  bottom: 1rem;
+  right: 16px;
+  bottom: 14px;
   cursor: pointer;
 }
 
@@ -523,5 +524,17 @@ img{
 .mobile-menu .links .link {
   font-size: 1.8rem;
   color: var(--blue-600);
+}
+
+.overlay {
+  display: none;
+  z-index: 4000;
+  inset: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.overlay.show {
+  display: block;
 }
 

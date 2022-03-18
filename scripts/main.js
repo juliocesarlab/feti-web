@@ -1,15 +1,21 @@
 const menuBtn = document.querySelector('.hamb-button');
 const closeMenuBtn = document.querySelector('.close-menu-button');
 const menu = document.querySelector('.mobile-menu');
-const body = document.querySelector('body')
+const overlay = document.querySelector('.overlay')
 
 
-function handleMenu(e) {
-  menu.classList.toggle('show')
-  return
+const handleMenu = (e) => {
+  e.stopPropagation()
+  menu.classList.toggle('show') 
+  overlay.classList.toggle('show') 
 }
 
-menuBtn.addEventListener('click', handleMenu)
-closeMenuBtn.addEventListener('click', handleMenu)
+closeMenuBtn.onclick = handleMenu
+menuBtn.onclick = handleMenu
 
-/* create a background, so event target is more specifically. In the way are u doing, u is calling handleMenu 2 times by click
+overlay.addEventListener('click', (e) => {
+   {
+    menu.classList.toggle('show') 
+    overlay.classList.toggle('show')
+  } 
+})
