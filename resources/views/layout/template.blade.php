@@ -16,9 +16,83 @@
 
     <title>@yield('title')</title>
   </head>
+  <body>
+    <div class="overlay">
+      <aside class="mobile-menu">
+        <div class="close-menu-button">
+          <i class="fas fa-times-circle"></i>
+        </div>
+        <div class="mobile-menu-wrapper">
 
-  @yield('content')
+          <div class="links">
+            <a href="#" class="link">Sobre Nós</a>
+            <a href="#" class="link">Notícias</a>
+            <a href="#" class="link">Editais</a>
+            <a href="#" class="link">Legislação</a>
+            <a href="#" class="link">Quadro colaborativo</a>
+            <a href="#" class="link">Contato</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <nav>
+        <section class="pre-nav">
+          <div class="pre-nav-wrapper">
+            <div class="links bg-element">
+              <a href="#" class="link">Sobre Nós</a>
+              <a href="#" class="link">Notícias</a>
+              <a href="#" class="link">Editais</a>
+              <a href="#" class="link">Legislação</a>
+              <a href="#" class="link">Quadro colaborativo</a>
+              <a href="#" class="link">Contato</a>
+            </div>
+          </div>
+        </section>
 
+        <section class="main-nav">
+          <div class="logo-area">
+            <div class="logo-wrapper">
+              <img src="images/logo.png" alt="FETI" width="300px">
+            </div>
+          </div>
+
+          <div class="search-area">
+            <div class="search-wrapper">
+              <input type="text" placeholder="O que você procura ?">
+              <span class="search-icon"><i class="fas fa-search"></i></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="pos-nav">
+          <div class="pos-nav-wrapper">
+            <div class="hamb-button-wrapper">
+              <div class="hamb-button">
+                <span class="hamb-line"></span>
+                <span class="hamb-line"></span>
+                <span class="hamb-line"></span>
+              </div>
+            </div>
+
+            <div class="acessibility-wrapper">
+              <div class="font-size-adjust">
+                <span>Acessibilidade</span>
+                <span id="smallFontSize">-A</span>
+                <span id="regularFontSize">A</span>
+                <span id="bigFontSize">+A</span>
+              </div>
+              <div class="theme-adjust">
+                <i class="fas fa-toggle-off"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+    </nav>
+
+    <main id="main-container">
+      @yield('content')
+    </main>
+    </body>
   <footer>
       <section class="social-media">
         <div class="social-media-wrapper">
@@ -91,3 +165,4 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/slider.js"></script>
+    </html>

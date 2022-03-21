@@ -3,82 +3,7 @@
 @section('title', 'FETI- Iniciação profissional')
 
 @section('content')
-
-  <body>
-    <div class="overlay">
-      <aside class="mobile-menu">
-        <div class="close-menu-button">
-          <i class="fas fa-times-circle"></i>
-        </div>
-        <div class="mobile-menu-wrapper">
-
-          <div class="links">
-            <a href="#" class="link">Sobre Nós</a>
-            <a href="#" class="link">Notícias</a>
-            <a href="#" class="link">Editais</a>
-            <a href="#" class="link">Legislação</a>
-            <a href="#" class="link">Quadro colaborativo</a>
-            <a href="#" class="link">Contato</a>
-          </div>
-        </div>
-      </aside>
-    </div>
-    <nav>
-        <section class="pre-nav">
-          <div class="pre-nav-wrapper">
-            <div class="links bg-element">
-              <a href="#" class="link">Sobre Nós</a>
-              <a href="#" class="link">Notícias</a>
-              <a href="#" class="link">Editais</a>
-              <a href="#" class="link">Legislação</a>
-              <a href="#" class="link">Quadro colaborativo</a>
-              <a href="#" class="link">Contato</a>
-            </div>
-          </div>
-        </section>
-
-        <section class="main-nav">
-          <div class="logo-area">
-            <div class="logo-wrapper">
-              <img src="images/logo.png" alt="FETI" width="300px">
-            </div>
-          </div>
-
-          <div class="search-area">
-            <div class="search-wrapper">
-              <input type="text" placeholder="O que você procura ?">
-              <span class="search-icon"><i class="fas fa-search"></i></span>
-            </div>
-          </div>
-        </section>
-
-        <section class="pos-nav">
-          <div class="pos-nav-wrapper">
-            <div class="hamb-button-wrapper">
-              <div class="hamb-button">
-                <span class="hamb-line"></span>
-                <span class="hamb-line"></span>
-                <span class="hamb-line"></span>
-              </div>
-            </div>
-
-            <div class="acessibility-wrapper">
-              <div class="font-size-adjust">
-                <span>Acessibilidade</span>
-                <span id="smallFontSize">-A</span>
-                <span id="regularFontSize">A</span>
-                <span id="bigFontSize">+A</span>
-              </div>
-              <div class="theme-adjust">
-                <i class="fas fa-toggle-off"></i>
-              </div>
-            </div>
-          </div>
-        </section>
-    </nav>
-
-    <main id="main-container">
-      <section class="services">
+<section class="services">
         <div class="section-heading">
           <h1 class="section-title">Serviços</h1>
         </div>
@@ -137,31 +62,26 @@
         </div>
 
         <div class="section-body">
-          <a href="#" class="news-card-link">
-            <div class="news-card">
-              <div class="news-image">
-                <img src="images/not1.jpeg" alt="noticia">
-              </div>
-              <div class="news-details">
-                <span>13/03/2022</span>
-                <h3>titulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quaerat?</p>
-              </div>
-            </div>
-          </a>
+         @foreach($news as $index => $sNews)
+
+         @if($index == 2)
+            @break
+         @endif
 
           <a href="#" class="news-card-link">
             <div class="news-card">
-            <div class="news-image">
-              <img src="images/not2.png" alt="noticia">
+              <div class="news-image">
+                <img src="images/{{$sNews->image}}" alt="noticia">
+              </div>
+              <div class="news-details">
+                <span>{{$sNews->created_at->format('d/m/Y')}}</span>
+                <h3>{{$sNews->title}}</h3>
+                <p>{{substr($sNews->content, 0, 75). '...'}}</p>
+              </div>
             </div>
-            <div class="news-details">
-              <span>13/03/2022</span>
-              <h3>titulo</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quaerat?</p>
-            </div>
-          </div>
           </a>
+          @endforeach
+         <a href="/noticias" class="regular-link">Veja mais notícias</a>
         </div>
       </section>
 
@@ -184,10 +104,7 @@
               </div>
         </div>
       </section>
+@endsection
 
 
-    </main>
 
-
-  </body>
-</html
