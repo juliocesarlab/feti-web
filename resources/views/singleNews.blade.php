@@ -6,7 +6,7 @@
   <section class="single-news-page">
     <div class="section-body">
       <div class="banner-container">
-        <img src="/images/{{$news->image}}" alt="{{$news->title}}">
+        <img src="/images/news/{{$news->image}}" alt="{{$news->title}}">
       </div>
       <div class="content">
         <div class="section-heading">

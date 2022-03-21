@@ -625,3 +625,68 @@ span:hover {
   font-size: 1.25rem;
 }
 
+/* create news */
+
+.create-news {
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.create-news form {
+  width: 100%;
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  border: 1px solid #b3b3b5;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+
+.create-news .input-control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.create-news .input-control input, textarea {
+  height: 2.5rem;
+  padding-left: 0.5rem;
+  outline: none;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.create-news .input-control{
+  font-size: 1.2rem;
+}
+
+.create-news button {
+  font-size: 1.2rem;
+  color: var(--white-200);
+
+  justify-self: center;
+
+  width: 50%;
+  height: 3rem;
+
+  background: var(--blue-400);
+  
+  cursor: pointer;
+
+  border-radius: 0.5rem;
+  border: 0;
+}
+
+.create-news button:hover{
+  filter: brightness(0.75);
+}

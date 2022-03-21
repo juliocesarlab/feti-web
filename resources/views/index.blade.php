@@ -67,7 +67,7 @@
           <a href="#" class="news-card-link">
             <div class="news-card">
               <div class="news-image">
-                <img src="images/{{$sNews->image}}" alt="noticia">
+                <img src="images/news/{{$sNews->image}}" alt="noticia">
               </div>
               <div class="news-details">
                 <span>{{$sNews->created_at->format('d/m/Y')}}</span>

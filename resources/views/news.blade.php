@@ -9,17 +9,22 @@
         </div>
 
         <div class="section-body">
+
+         @if(count($news) === 0) 
+           <p style="min-height: 12vh;">Não há notícias ainda, volte mais tarde.</p>
+         @endif
+
          @foreach($news as $index => $sNews)
 
           <a href="/noticias/{{$sNews->id}}" class="news-card-link">
             <div class="news-card">
               <div class="news-image">
-                <img src="/images/{{$sNews->image}}" alt="{{$sNews->title}}">
+                <img src="/images/news/{{$sNews->image}}" alt="{{$sNews->title}}">
               </div>
               <div class="news-details">
                 <span>{{$sNews->created_at->format('d/m/Y')}}</span>
                 <h3>{{$sNews->title}}</h3>
-                <p>{{substr($sNews->content, 0, 150). '...'}}</p>
+                <p>{{substr($sNews->content, 0, 75). '...'}}</p>
               </div>
             </div>
           </a>
