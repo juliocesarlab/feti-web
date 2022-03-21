@@ -13,7 +13,7 @@
           <h1 class="section-title">{{$news->title}}</h1> <span class="news-date">{{$news->created_at->format('d/m/Y')}}</span>
         </div>
         <div class="news-content">
-          {{$news->content}}
+          {!! $news->content !!}
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@
 
           <div class="links">
             <a href="#" class="link">Sobre Nós</a>
-            <a href="#" class="link">Notícias</a>
+            <a href="/noticias" class="link">Notícias</a>
             <a href="#" class="link">Editais</a>
             <a href="#" class="link">Legislação</a>
             <a href="#" class="link">Quadro colaborativo</a>
@@ -40,7 +40,7 @@
           <div class="pre-nav-wrapper">
             <div class="links bg-element">
               <a href="#" class="link">Sobre Nós</a>
-              <a href="#" class="link">Notícias</a>
+              <a href="/noticias" class="link">Notícias</a>
               <a href="#" class="link">Editais</a>
               <a href="#" class="link">Legislação</a>
               <a href="#" class="link">Quadro colaborativo</a>
@@ -52,7 +52,9 @@
         <section class="main-nav">
           <div class="logo-area">
             <div class="logo-wrapper">
-              <img src="{{asset('images/logo.png')}}" alt="FETI" width="300px">
+              <a href="/">
+                <img src="{{asset('images/logo.png')}}" alt="FETI" width="300px">
+              </a>
             </div>
           </div>
 
@@ -165,4 +167,11 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="{{asset('js/swiper.js')}}"></script>
     <script src="{{asset('js/slider.js')}}"></script>
+    <script src="https://cdn.tiny.cloud/1/gnipllteyx1nuwkxbw9rjpgeww8jeazcrnvn2foj5es9v2ke/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+    tinymce.init({
+      selector: '#content',
+      toolbar: 'undo redo | formatselect| bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist '
+    });
+  </script>
     </html>

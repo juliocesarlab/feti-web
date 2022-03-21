@@ -17,7 +17,7 @@ class NewsController extends Controller
       $news = News::all()
               ->take(2);
 
-      return view('news-preview', ['news' => $news]);
+      return view('index', ['news' => $news]);
     }
 
     public function fullView($id) {

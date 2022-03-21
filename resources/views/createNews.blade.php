@@ -21,7 +21,7 @@
 
       <div class="input-control">
         <label for="content">Conteúdo</label>
-        <textarea type="textarea" name="content">
+        <textarea type="textarea" name="content" id="content">
         </textarea> 
       </div>
 
@@ -33,4 +33,5 @@
       <button type="submit">Criar</button>
     </form>
   </section>
+
 @endsection

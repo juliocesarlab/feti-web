@@ -62,7 +62,7 @@
         </div>
 
         <div class="section-body">
-         @foreach($news as $index => $sNews
+         @foreach($news as $index => $sNews)
 
           <a href="#" class="news-card-link">
             <div class="news-card">
@@ -77,9 +77,10 @@
             </div>
           </a>
           @endforeach
-         <a href="/noticias" class="regular-link">Veja mais notícias</a>
         </div>
+        
       </section>
+      <a href="/noticias" class="regular-link">Veja mais notícias</a>
 
       <section class="partners">
         <div class="section-heading">
