@@ -10,9 +10,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="{{asset('css/slider.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/media-queries.css')}}">
 
     <title>@yield('title')</title>
   </head>
@@ -52,7 +52,7 @@
         <section class="main-nav">
           <div class="logo-area">
             <div class="logo-wrapper">
-              <img src="images/logo.png" alt="FETI" width="300px">
+              <img src="{{asset('images/logo.png')}}" alt="FETI" width="300px">
             </div>
           </div>
 
@@ -154,15 +154,15 @@
             </div>
           </div>
           <div class="logos">
-            <img src="images/logo.png" alt="FETI">
+            <img src="{{asset('images/logo.png')}}" alt="FETI">
           </div>
         </div>
       </section>
     </footer>
-    <script src="js/main.js"></script>
-    <script src="js/acessiblity.js"></script>
+    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{asset('js/acessiblity.js')}}"></script>
     <script src="https://kit.fontawesome.com/710ee36645.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="{{asset('js/swiper.js')}}"></script>
+    <script src="{{asset('js/slider.js')}}"></script>
     </html>

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\News;
 
-class newsController extends Controller
+class NewsController extends Controller
 {
     public function listAll() {
         $news = News::all();
@@ -13,9 +13,15 @@ class newsController extends Controller
         return view('news', ['news' => $news]);
     }
 
-    public function home() {
-      $news = News::all();
+    public function preview() {
+      $news = News::all()
+              ->take(2);
 
-      return view('index', ['news' => $news]);
-  }
+      return view('news-preview', ['news' => $news]);
+    }
+
+    public function fullView($id) {
+      $news = News::findOrFail($id);
+      return view('singleNews', ['news' => $news]);
+    }
 }

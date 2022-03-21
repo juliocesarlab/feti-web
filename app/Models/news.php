@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
+    public $incrementing = true;
     use HasFactory;
 }

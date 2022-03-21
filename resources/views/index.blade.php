@@ -62,11 +62,7 @@
         </div>
 
         <div class="section-body">
-         @foreach($news as $index => $sNews)
-
-         @if($index == 2)
-            @break
-         @endif
+         @foreach($news as $index => $sNews
 
           <a href="#" class="news-card-link">
             <div class="news-card">
