@@ -72,7 +72,7 @@
               <div class="news-details">
                 <span>{{$sNews->created_at->format('d/m/Y')}}</span>
                 <h3>{{$sNews->title}}</h3>
-                <p>{{substr($sNews->content, 0, 75). '...'}}</p>
+                <p>{{substr($sNews->short_desc, 0, 75). '...'}}</p>
               </div>
             </div>
           </a>

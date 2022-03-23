@@ -697,3 +697,41 @@ span:hover {
 .create-news button:hover{
   filter: brightness(0.75);
 }
+
+.dashboard-header {
+  background: #202124;
+  height: 100px;
+  padding: 0 2rem;
+}
+
+.dashboard-header nav {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.dashboard-header nav img {
+  width: 100%;
+  max-width: 150px;
+}
+
+.dashboard-header nav .options {
+  display: flex;
+  gap: 1rem;
+
+  font-size: 1.2rem;
+}
+
+.options a{
+  color: var(--white-200);
+}
+
+.options a:hover {
+  filter: brightness(0.75);
+}

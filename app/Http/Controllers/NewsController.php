@@ -20,7 +20,7 @@ class NewsController extends Controller
       return view('index', ['news' => $news]);
     }
 
-    public function fullView($id) {
+    public function getOne($id) {
       $news = News::findOrFail($id);
       return view('singleNews', ['news' => $news]);
     }
@@ -34,6 +34,7 @@ class NewsController extends Controller
 
       $news->title = $request->title;
       $news->content = $request->content;
+      $news->short_desc = $request->short_desc;
 
 
       // Image Upload
@@ -52,6 +53,6 @@ class NewsController extends Controller
 
       $news->save();
 
-      return redirect('/noticias')->with('msg', 'Notícia criada com sucesso');
+      return redirect('/noticias');
     }
 }

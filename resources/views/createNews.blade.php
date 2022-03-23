@@ -19,6 +19,12 @@
         <input type="text" name="title" id="title">
       </div>
 
+      
+      <div class="input-control">
+        <label for="short_desct">Descrição</label>
+        <input type="text" name="short_desc" id="short_desc" /> 
+      </div>
+
       <div class="input-control">
         <label for="content">Conteúdo</label>
         <textarea type="textarea" name="content" id="content">
