@@ -7,10 +7,14 @@ use App\Models\News;
 
 class NewsController extends Controller
 {
-    public function listAll() {
+    public function index() {
         $news = News::all();
+        return view('news',  ['news' => $news]);
+    }
 
-        return view('news', ['news' => $news]);
+    public function getAll() {
+      $news = News::all();
+      return view('news-dashboard',  ['news' => $news]);
     }
 
     public function preview() {
@@ -25,11 +29,11 @@ class NewsController extends Controller
       return view('singleNews', ['news' => $news]);
     }
 
-    public function createForm() {
+    public function create() {
       return view('createNews');
     }
 
-    public function create(Request $request) {
+    public function store(Request $request) {
       $news = new News;
 
       $news->title = $request->title;

@@ -64,7 +64,7 @@
         <div class="section-body">
          @foreach($news as $index => $sNews)
 
-          <a href="#" class="news-card-link">
+          <a href="noticias/{{$sNews->id}}" class="news-card-link">
             <div class="news-card">
               <div class="news-image">
                 <img src="images/news/{{$sNews->image}}" alt="noticia">

@@ -30,6 +30,10 @@
       </div>
     </nav>
   </header>
-
+  <main id="main-container">
+    @yield('content')
+  </main>
+  <script src="https://kit.fontawesome.com/710ee36645.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tiny.cloud/1/gnipllteyx1nuwkxbw9rjpgeww8jeazcrnvn2foj5es9v2ke/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </body>
 </html>
