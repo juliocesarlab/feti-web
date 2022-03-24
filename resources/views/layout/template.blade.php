@@ -167,11 +167,5 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="{{asset('js/swiper.js')}}"></script>
     <script src="{{asset('js/slider.js')}}"></script>
-    <script src="https://cdn.tiny.cloud/1/gnipllteyx1nuwkxbw9rjpgeww8jeazcrnvn2foj5es9v2ke/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <script>
-    tinymce.init({
-      selector: '#content',
-      toolbar: 'undo redo | formatselect| bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist '
-    });
   </script>
     </html>

@@ -635,27 +635,27 @@ span:hover {
 /* create news */
 
 .create-news {
-  min-height: 60vh;
-
+  min-height: calc(100vh - 100px);
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.text-editor {
+  color: red;
+}
 
 
 .create-news form {
   width: 100%;
-  max-width: 500px;
+  max-width: 1250px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 
-  border: 1px solid #b3b3b5;
-  padding: 1rem;
-  border-radius: 1rem;
 }
 
 
@@ -665,13 +665,48 @@ span:hover {
   width: 100%;
 }
 
+.create-news .input-control label {
+  margin-bottom: 1rem;
+}
+
 .create-news .input-control input, textarea {
   height: 2.5rem;
   padding-left: 0.5rem;
   outline: none;
-  margin-top: 1rem;
   width: 100%;
+
+  border: 0;
+  border: 1px solid #b3b3b5;
+
+  font-size: 1.2rem;
 }
+
+.create-news .input-control #banner-input-file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.create-news .input-control.drop-zone {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 1px dashed #b3b3b5;
+
+  cursor: pointer;
+  position: relative;
+  margin-top: 1rem;
+
+  transition: border 0.5s;
+}
+
+.create-news .input-control.drop-zone label {
+  margin: 0;
+}
+
 
 .create-news .input-control{
   font-size: 1.2rem;
@@ -701,7 +736,7 @@ span:hover {
 /* dashboard-template */
 
 .dashboard-header {
-  background: #202124;
+  background: var(--blue-600);
   height: 100px;
   padding: 0 2rem;
 }
@@ -781,3 +816,4 @@ span:hover {
   display: flex;
   gap: 0.5rem;
 }
+

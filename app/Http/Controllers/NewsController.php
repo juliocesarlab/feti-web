@@ -8,7 +8,7 @@ use App\Models\News;
 class NewsController extends Controller
 {
     public function index() {
-        $news = News::all();
+        $news = News::all()->sortByDesc('created_at');
         return view('news',  ['news' => $news]);
     }
 
@@ -19,6 +19,7 @@ class NewsController extends Controller
 
     public function preview() {
       $news = News::all()
+              ->sortByDesc('created_at')
               ->take(2);
 
       return view('index', ['news' => $news]);
