@@ -37,7 +37,6 @@
   <script src="https://kit.fontawesome.com/710ee36645.js" crossorigin="anonymous"></script>
   <script src="https://cdn.tiny.cloud/1/gnipllteyx1nuwkxbw9rjpgeww8jeazcrnvn2foj5es9v2ke/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   <script src="{{asset('js/dropFile.js')}}"></script>
-  <script src="{{asset('js/editNewsForm.js')}}"></script>
   <script>
     tinymce.init({
       selector: '#content',

@@ -53,6 +53,7 @@
 
       <div class="input-control drop-zone">
         <label id="banner-label" for="banner-input-file">Clique ou arraste aqui para enviar o &nbsp;<span>banner</span></label>
+        <div class="image-input-preview" style="background-image: url('/images/news/{{$news->image}}');"></div>
         <input type="file" name="banner" id="banner-input-file" required>
       </div>
 

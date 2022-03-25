@@ -11,6 +11,31 @@ bannerArea.ondragleave = (e) => e.preventDefault()
 bannerArea.ondragover = (e) => e.preventDefault()
 bannerArea.ondrag = (e) => e.preventDefault()
 
+function updateThumbnail(file) {
+
+  let thumbnailElement = document.querySelector('.image-input-preview')
+  // First time - there is no thumbnail element, so lets create it
+ 
+  if (!thumbnailElement) {
+    thumbnailElement = document.createElement("div");
+    thumbnailElement.classList.add('image-input-preview')
+    bannerArea.appendChild(thumbnailElement);
+  }
+
+
+  // Show thumbnail for image files
+  if (file.type.startsWith("image/")) {
+    const reader = new FileReader();
+
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+    };
+  } else {
+    thumbnailElement.style.backgroundImage = null;
+  }
+}
+
 
 bannerArea.onclick = (e) => bannerInput.click()
 
@@ -21,6 +46,8 @@ function isImage(target, isEvent) {
   if (!isValid) {
     bannerLabel.innerHTML = `Você só pode enviar imagens neste campo!`
     bannerArea.style.border = '1px dashed red'
+    document.querySelector('input[type="file"]').value = ''
+    document.querySelector('.image-input-preview').remove()
   } else {
     bannerArea.style.border = '1px dashed #b3b3b5'
   }
@@ -43,10 +70,12 @@ bannerArea.addEventListener("drop", (e) => {
     console.log(image)
     bannerInput.files = e.dataTransfer.files;
   }
+
+  updateThumbnail(image);
+
 })
 
 bannerInput.addEventListener("change", (e) => {
-  console.log(bannerInput.files[0])
   const isValid = isImage(bannerInput.files[0])
   
   if (!isValid){
@@ -58,5 +87,7 @@ bannerInput.addEventListener("change", (e) => {
     const image = e.target.files[0]
     bannerLabel.innerHTML = `Você está enviando ${image.name} /${((image.size/1024)/1024).toFixed(2)}mb como banner`
   }
+
+  updateThumbnail(bannerInput.files[0]);
 })
 
