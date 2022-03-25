@@ -37,7 +37,7 @@ class NewsController extends Controller
     public function edit( $id) {
       $news = News::findOrFail($id);
       
-      return view('news.dit-news', ['news' => $news]);
+      return view('news.edit-news', ['news' => $news]);
     }
 
     public function Update(Request $request,$id) {

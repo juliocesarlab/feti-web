@@ -4,7 +4,7 @@
 
 @section('content')
 
-<section class="create-news">
+<section class="news-form">
    <form action="/noticias" method="POST" enctype="multipart/form-data">
       @csrf
 

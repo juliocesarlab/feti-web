@@ -22,8 +22,10 @@
         @foreach($news as $n)
         <div class="news-row">
           <div class="news-row-heading">
-            <h3><a href="/noticias/{{$n->id}}" target="blank">{{$n->title}}</h3></a>
-            <p>{{$n->short_desc}}</p>
+            <a href="/noticias/{{$n->id}}" target="_blank">  
+              <h3 title="{{$n->title}}">{{$n->title}}</h3>
+              <p title="{{$n->short_desc}}">{{ substr($n->short_desc, 0, 45). '...' }}</p>
+            </a>
           </div>
           <div class="news-row-options">
             <a href="/noticias/edit/{{$n->id}}">Editar</a>

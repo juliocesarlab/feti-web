@@ -4,7 +4,7 @@
 
 @section('content')
 
-<section class="create-news">
+<section class="news-form">
    <form action="/noticias/edit/{{$news->id}}" method="POST" enctype="multipart/form-data" id="editForm">
       @csrf
 
@@ -22,7 +22,7 @@
           value="{{$news->title}}"
           name="title" 
           id="title" 
-          placeholder="Feti abre as inscrições..." 
+          placeholder="{{$news->title}}" 
           required>
       </div>
 
@@ -34,7 +34,7 @@
           value="{{$news->short_desc}}"
           name="short_desc" 
           id="short_desc" 
-          placeholder="Informações a respeito de..." 
+          placeholder="{{$news->short_desc}}" 
           required/> 
       </div>
 
@@ -56,7 +56,7 @@
         <input type="file" name="banner" id="banner-input-file" required>
       </div>
 
-      <button type="submit">Editar</button>
+      <button type="submit">Concluir edição</button>
     </form>
 </section>
 

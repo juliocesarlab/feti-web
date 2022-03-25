@@ -6,9 +6,12 @@
 }
 
 :root {
-  --blue-600: #001859;
-  --blue-400: #00216c;
-  --cian-200: #00bef2;
+  --blue-600:  #001859;
+  --blue-400:  #00216c;
+  --cian-200:  #00bef2;
+  --gray-400:  #b3b3b5;
+  --gray-600:  #7E8C8D;
+  --gray-800:  #202124;
   --white-200: #eeeeee;
 }
 
@@ -19,7 +22,16 @@ body {
 }
 
 a {
+  font-size: 1.1rem;
   text-decoration: none;
+  transition: translateY, 0.5s;
+}
+
+.dashboard-header a:hover,
+.dashboard-heading a:hover,
+.news-dashboard a:hover{
+  filter: brightness(0.5);
+  transform: translateY(-2px);
 }
 
 i {
@@ -617,6 +629,7 @@ span:hover {
   overflow: hidden;
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .single-news-page .section-body .banner-container img{
@@ -646,20 +659,20 @@ span:hover {
 
 /* create news */
 
-.create-news {
+.news-form {
   min-height: calc(100vh - 100px);
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.text-editor {
-  color: red;
+
+  box-shadow: 5px 10px 25px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+  padding: 2rem;
 }
 
-
-.create-news form {
+.news-form form {
   width: 100%;
   max-width: 1250px;
 
@@ -671,36 +684,39 @@ span:hover {
 }
 
 
-.create-news .input-control {
+.news-form .input-control {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.create-news .input-control label {
+.news-form .input-control label {
   margin-bottom: 1rem;
+  color: #202124;
 }
 
-.create-news .input-control input, textarea {
+.news-form .input-control input, textarea {
   height: 2.5rem;
   padding-left: 0.5rem;
   outline: none;
   width: 100%;
 
   border: 0;
-  border: 1px solid #b3b3b5;
+  border-bottom: 1px solid #b3b3b5;
 
-  font-size: 1.2rem;
+
+  font-size: 1.1rem;
+  color: var(--gray-600);
 }
 
-.create-news .input-control #banner-input-file {
+.news-form .input-control #banner-input-file {
     opacity: 0;
     width: 0.1px;
     height: 0.1px;
     position: absolute;
 }
 
-.create-news .input-control.drop-zone {
+.news-form .input-control.drop-zone {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -715,16 +731,16 @@ span:hover {
   transition: border 0.5s;
 }
 
-.create-news .input-control.drop-zone label {
+.news-form .input-control.drop-zone label {
   margin: 0;
 }
 
 
-.create-news .input-control{
+.news-form .input-control{
   font-size: 1.2rem;
 }
 
-.create-news button {
+.news-form button {
   font-size: 1.2rem;
   color: var(--white-200);
 
@@ -741,7 +757,7 @@ span:hover {
   border: 0;
 }
 
-.create-news button:hover{
+.news-form button:hover{
   filter: brightness(0.75);
 }
 
@@ -751,6 +767,8 @@ span:hover {
   background: none;
   height: 100px;
   padding: 0 2rem;
+
+  border-bottom: 1px solid var(--gray-400);
 }
 
 .dashboard-header nav {
@@ -767,7 +785,7 @@ span:hover {
 
 .dashboard-header nav img {
   width: 100%;
-  max-width: 150px;
+  max-width: 80px;
 }
 
 .dashboard-header nav .options {
@@ -778,8 +796,7 @@ span:hover {
 }
 
 .options a{
-  color: #b3b3b5;
-  filter: brightness(0.75);
+  color: var(--gray-600);
 }
 
 .options a:hover {
@@ -793,7 +810,7 @@ span:hover {
   font-size: 2.5rem;
 
   font-weight: 900;
-  color: var(--blue-600);
+  color: var(--gray-800);
 
   text-transform: uppercase;
 
@@ -801,9 +818,8 @@ span:hover {
 }
 
 .dashboard-heading a{
-  color: var(--blue-400);
+  color: var(--gray-600);
 }
-
 
 /* news-dashboard */
 
@@ -824,24 +840,12 @@ span:hover {
   margin-left: 1rem;
 }
 
-.news-dashboard .dashboard-heading {
-  cursor: pointer;
-}
-
-.news-dashboard a{
-  color: var(--blue-400);
-}
-
-.news-dashboard .dashboard-heading a:hover {
-  color: var(--blue-600);
-}
-
 .news-dashboard .news-row {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding-bottom: 0.5rem;
-  border-bottom:  1px solid #202124;
+  border-bottom:  1px solid var(--gray-800);
 }
 
 .news-dashboard .news-row + .news-row  {
@@ -853,8 +857,18 @@ span:hover {
   gap: 0.5rem;
 }
 
+.news-row a {
+  color: var(--gray-800);
+}
+
+
+.news-row-heading a{
+  font-size: 1.5rem;
+  color: var(--gray-800);
+}
+
 p.advice {
-  color: #00216c;
+  color: var(--gray-400);
   font-size: 2rem;
   min-height: 10vh;
   display: flex;

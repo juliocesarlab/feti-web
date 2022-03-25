@@ -13,7 +13,7 @@
 <body>
   <header class="dashboard-header">
     <nav>
-      <img src="{{asset('images/logo.png')}}" alt="FETI">
+      <img src="{{asset('images/logo-2.png')}}" alt="FETI" width="20">
       <div class="options">
         <a href="/dashboard/servicos">
           Serviços
