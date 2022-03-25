@@ -5,15 +5,24 @@
   <div class="news-dashboard">
     <div class="dashboard-heading">
       <h1>Noticias</h1>
-      <a href="/noticias/create">Nova notícia<i class="fas fa-plus"></i></a>
+      <div>
+        <a href="/noticias/create">Nova notícia<i class="fas fa-plus new-news"></i></a>
+      </div>
     </div>
 
     <div class="dashboard-body">
       <div class="news-container">
+        @if(count($news) === 0)
+          <p 
+            class="advice">Não há notícias, 
+            <span onclick="document.querySelector('.new-news').click();" 
+            style="font-weight: bold;">&nbsp;crie uma agora</span></p>
+        @endif
+
         @foreach($news as $n)
         <div class="news-row">
           <div class="news-row-heading">
-            <h3>{{$n->title}}</h3>
+            <h3><a href="/noticias/{{$n->id}}" target="blank">{{$n->title}}</h3></a>
             <p>{{$n->short_desc}}</p>
           </div>
           <div class="news-row-options">

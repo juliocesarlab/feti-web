@@ -8,10 +8,11 @@
    <form action="/noticias" method="POST" enctype="multipart/form-data">
       @csrf
 
-      <div class="section-heading">
-      <h1 class="section-title">
-        Criar notícia
-      </h1>
+      <div class="dashboard-heading spacing">
+        <h1 class="section-title">
+          Criar notícia
+        </h1>
+        <a href="/dashboard/noticias">Ver notícias criadas</a>
       </div>
 
       <div class="input-control">
@@ -32,7 +33,7 @@
       </div>
 
       <div class="input-control drop-zone">
-        <label id="banner-label" for="banner-input-file">Clique aqui para enviar o &nbsp;<span>banner</span></label>
+        <label id="banner-label" for="banner-input-file">Clique ou arraste aqui para enviar o &nbsp;<span>banner</span></label>
         <input type="file" name="banner" id="banner-input-file" required>
       </div>
 

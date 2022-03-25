@@ -216,6 +216,18 @@ span:hover {
   margin-bottom: 2rem;
 }
 
+.section-description {
+  font-size: 1.2rem;
+  line-height: 0rem;
+  color: var(--blue-400);
+}
+
+.dashboard-heading.spacing {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .section-heading .section-title {
   font-family: "Titillium Web", sans-serif;
   display: inline-block;
@@ -736,7 +748,7 @@ span:hover {
 /* dashboard-template */
 
 .dashboard-header {
-  background: var(--blue-600);
+  background: none;
   height: 100px;
   padding: 0 2rem;
 }
@@ -766,12 +778,32 @@ span:hover {
 }
 
 .options a{
-  color: var(--white-200);
+  color: #b3b3b5;
+  filter: brightness(0.75);
 }
 
 .options a:hover {
   filter: brightness(0.75);
 }
+
+.dashboard-heading h1{
+  font-family: "Titillium Web", sans-serif;
+  display: inline-block;
+
+  font-size: 2.5rem;
+
+  font-weight: 900;
+  color: var(--blue-600);
+
+  text-transform: uppercase;
+
+  position: relative;
+}
+
+.dashboard-heading a{
+  color: var(--blue-400);
+}
+
 
 /* news-dashboard */
 
@@ -796,6 +828,10 @@ span:hover {
   cursor: pointer;
 }
 
+.news-dashboard a{
+  color: var(--blue-400);
+}
+
 .news-dashboard .dashboard-heading a:hover {
   color: var(--blue-600);
 }
@@ -817,3 +853,14 @@ span:hover {
   gap: 0.5rem;
 }
 
+p.advice {
+  color: #00216c;
+  font-size: 2rem;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+p.advice > span {
+  cursor: pointer;
+}
