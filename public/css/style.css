@@ -790,6 +790,8 @@ span:hover {
   border-bottom: 1px solid var(--gray-400);
 }
 
+
+
 .dashboard-header nav {
   height: 100%;
   width: 100%;
@@ -896,4 +898,9 @@ p.advice {
 
 p.advice > span {
   cursor: pointer;
+}
+
+.logout-link {
+  color: indianred !important;
+  margin: 0 2rem;
 }

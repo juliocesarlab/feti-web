@@ -27,6 +27,15 @@
         <a href="/dashboard/parceiros">
           Parceiros
         </a>
+        <form action="/logout" method="POST">
+          <a href="/logout" 
+            class="logout-link"
+            onclick="event.preventDefault(); this.closest('form').submit();" 
+          >
+            @csrf
+            Sair
+          </a>
+        </form>
       </div>
     </nav>
   </header>
