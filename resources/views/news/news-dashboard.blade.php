@@ -4,9 +4,9 @@
 @section('content')
   <div class="news-dashboard">
     <div class="dashboard-heading">
-      <h1>Noticias</h1>
+      <a href="/noticias" target="_blank"><h1>Noticias</h1></a>
       <div>
-        <a href="/noticias/create">Nova notícia<i class="fas fa-plus new-news"></i></a>
+        <a href="/dashboard/noticias/create">Nova notícia<i class="fas fa-plus new-news"></i></a>
       </div>
     </div>
 
@@ -28,8 +28,8 @@
             </a>
           </div>
           <div class="news-row-options">
-            <a href="/noticias/edit/{{$n->id}}">Editar</a>
-            <a href="/noticias/destroy/{{$n->id}}">Apagar</a>
+            <a href="/dashboard/noticias/edit/{{$n->id}}">Editar</a>
+            <a href="/dashboard/noticias/destroy/{{$n->id}}">Apagar</a>
           </div>
         </div>
         @endforeach

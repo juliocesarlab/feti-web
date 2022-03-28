@@ -5,7 +5,7 @@
 @section('content')
 
 <section class="news-form">
-   <form action="/noticias/edit/{{$news->id}}" method="POST" enctype="multipart/form-data" id="editForm">
+   <form action="/dashboard/noticias/edit/{{$news->id}}" method="POST" enctype="multipart/form-data" id="editForm">
       @csrf
 
       <div class="dashboard-heading spacing">
@@ -52,9 +52,9 @@
       </div>
 
       <div class="input-control drop-zone">
-        <label id="banner-label" for="banner-input-file">Clique ou arraste aqui para enviar o &nbsp;<span>banner</span></label>
+        <label id="banner-label" data-path="/images/news/{{$news->image}}" for="banner-input-file">Clique ou arraste aqui para enviar o &nbsp;<span>banner</span></label>
         <div class="image-input-preview" style="background-image: url('/images/news/{{$news->image}}');"></div>
-        <input type="file" name="banner" id="banner-input-file" required>
+        <input type="file" name="banner" id="banner-input-file">
       </div>
 
       <button type="submit">Concluir edição</button>

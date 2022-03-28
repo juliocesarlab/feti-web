@@ -5,7 +5,7 @@
 @section('content')
 
 <section class="news-form">
-   <form action="/noticias" method="POST" enctype="multipart/form-data">
+   <form action="/dashboard/noticias" method="POST" enctype="multipart/form-data">
       @csrf
 
       <div class="dashboard-heading spacing">

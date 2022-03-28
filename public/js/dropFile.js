@@ -2,7 +2,6 @@ const bannerArea = document.querySelector('.drop-zone');
 const bannerInput = document.querySelector('#banner-input-file')
 const bannerLabel = document.querySelector('#banner-label')
 
-window.onload = () => bannerInput.files[0] = null
 
 bannerArea.ondragcenter = (e) => e.preventDefault()
 bannerArea.ondragstart = (e) => e.preventDefault()
@@ -14,7 +13,6 @@ bannerArea.ondrag = (e) => e.preventDefault()
 function updateThumbnail(file) {
 
   let thumbnailElement = document.querySelector('.image-input-preview')
-  // First time - there is no thumbnail element, so lets create it
  
   if (!thumbnailElement) {
     thumbnailElement = document.createElement("div");

@@ -4,8 +4,23 @@ const bigFontSize = document.querySelector('#bigFontSize')
 const root = document.querySelector(':root')
 
 const themeButton = document.querySelector('.theme-adjust').children[0]
+
 const bgElements = document.querySelectorAll('section,  main, body, aside')
 const body = document.querySelector('body')
+
+window.onload = () => {
+  const theme = localStorage.getItem('theme')
+
+  if (theme == null) return
+
+  if (theme === 'dark') {
+    setDarkTheme()
+    switchThemeButtonClass()
+    return
+  }
+  
+  resetTheme()
+}
 
 //Adjust font-size of all page
 
@@ -23,7 +38,7 @@ function setDarkTheme() {
   })
 
   document.querySelectorAll('.section-title').forEach(title => title.style.color = '#fff')
-  document.querySelectorAll('a, i').forEach(text => text.style.color = '#fff')
+  document.querySelectorAll('a, i, p').forEach(text => text.style.color = '#fff')
   document.querySelectorAll('.logo-area, .search-area').forEach(header => header.style.backgroundColor = '#171717')
 
   const footerArea = document.querySelector('.address')
@@ -35,6 +50,8 @@ function setDarkTheme() {
     const children = [...news.children]
     children.forEach(child => child.style.color = '#fff')
   })
+
+  localStorage.setItem('theme', 'dark')
 }
 
 function resetTheme() {
@@ -44,7 +61,7 @@ function resetTheme() {
     children.forEach(children => children.style.color = '#001859')
   })
 
-  document.querySelectorAll('.section-title, a, i').forEach(title => title.style.color = '#001859')
+  document.querySelectorAll('.section-title, a, i, p').forEach(title => title.style.color = '#001859')
 
   const headerArea = document.querySelectorAll('.logo-area, .search-area')
   headerArea[0].style.backgroundColor = '#001859'
@@ -74,15 +91,18 @@ function resetTheme() {
     })
   })
 
+  localStorage.setItem('theme', 'light')
 }
 
-function switchThemeButtonClass(e) {
-  e.target.className.includes('off') 
-  ? e.target.classList = e.target.className.replace('off', 'on')
-  : e.target.classList = e.target.className.replace('on', 'off')
+function switchThemeButtonClass() {
+  themeButton.className.includes('off') 
+  ? themeButton.classList = themeButton.className.replace('off', 'on')
+  : themeButton.classList = themeButton.className.replace('on', 'off')
 
-  return e.target.className.includes('on') 
+  return themeButton.className.includes('on') 
 }
+
+themeButton.addEventListener('click', () => switchThemeButtonClass)
 
 function handleTheme(e) {
   const isButtonActive = switchThemeButtonClass(e)
