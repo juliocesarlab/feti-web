@@ -29,7 +29,9 @@
             <a href="/noticias" class="link">Notícias</a>
             <a href="#" class="link">Editais</a>
             <a href="#" class="link">Legislação</a>
-            <a href="#" class="link">Quadro colaborativo</a>
+            <a href="/images/colaboradores-feti.pdf"  class="link" target="_blank">Quadro Colaborativo</a>
+            <a href="/images/quemequem.pdf" target="_blank" class="link">Quem é quem</a>
+            <a href="http://www.uberaba.mg.gov.br/portal/conteudo,40337" class="link" target="_blank">Acesso à informação</a>
             <a href="#" class="link">Contato</a>
           </div>
         </div>

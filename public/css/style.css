@@ -209,7 +209,7 @@ span:hover {
   gap: 1rem;
 
   padding-right: 1rem;
-  border-right: 3px solid var(--blue-600);
+  border-right: 3px solid var(--white-200);
 }
 
 .font-size-adjust span {
@@ -661,6 +661,7 @@ span:hover {
 
 .single-news-page .news-content {
   font-size: 1.25rem;
+  line-break: anywhere;
 }
 
 /* create news */

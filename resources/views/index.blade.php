@@ -58,10 +58,14 @@
 
       <section class="news">
         <div class="section-heading">
-          <h1 class="section-title">Notícias</h1>
+          <h1 class="section-title">Ultimas Notícias</h1>
         </div>
 
         <div class="section-body">
+        @if(count($news) == 0) 
+          <p style="min-height: 12vh; font-size: 1.5rem;">Não há notícias ainda, volte mais tarde.</p>
+        @endif
+
          @foreach($news as $index => $sNews)
 
           <a href="noticias/{{$sNews->id}}" class="news-card-link">
@@ -80,8 +84,9 @@
         </div>
         
       </section>
-      <a href="/noticias" class="regular-link">Veja mais notícias</a>
-
+      @if(count($news) >= 2) 
+        <a href="/noticias" class="regular-link">Veja mais notícias</a>
+      @endif
       <section class="partners">
         <div class="section-heading">
           <h1 class="section-title">Parceiros</h1>

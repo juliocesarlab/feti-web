@@ -15,9 +15,6 @@
     <nav>
       <a href="/" target="_blank"><img src="{{asset('images/logo-2.png')}}" alt="FETI" width="20"></a>
       <div class="options">
-        <a href="/dashboard/servicos">
-          Serviços
-        </a>
         <a href="/dashboard/noticias">
           Notícias
         </a>
