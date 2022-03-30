@@ -81,4 +81,9 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .news.news-page .section-body .news-card {
+    flex-direction: column;
+    height: 500px;
+  }
 }

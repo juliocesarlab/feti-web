@@ -313,6 +313,7 @@ span:hover {
   max-width: 520px;
 
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 
   background: var(--white-200);
