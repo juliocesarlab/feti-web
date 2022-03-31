@@ -4,7 +4,7 @@
 
 @section('content')
 
-<section class="news-form">
+<section class="generic-form-wrapper">
    <form action="/dashboard/noticias" method="POST" enctype="multipart/form-data">
       @csrf
 

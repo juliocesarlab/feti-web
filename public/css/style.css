@@ -19,6 +19,7 @@ body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   position: relative;
+  min-height: 100vh;
 }
 
 a {
@@ -223,6 +224,7 @@ span:hover {
   margin: 0 auto;
   padding: 0 2rem;
 }
+
 
 #main-container section {
   margin: 2rem 0;
@@ -667,7 +669,7 @@ span:hover {
 
 /* create news */
 
-.news-form {
+.generic-form-wrapper {
   min-height: calc(100vh - 100px);
   margin: 0;
   display: flex;
@@ -680,7 +682,11 @@ span:hover {
   padding: 2rem;
 }
 
-.news-form form {
+.generic-form-wrapper.partners-form {
+  min-height: unset;
+}
+
+.generic-form-wrapper form {
   width: 100%;
   max-width: 1250px;
 
@@ -692,18 +698,18 @@ span:hover {
 }
 
 
-.news-form .input-control {
+.generic-form-wrapper .input-control {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.news-form .input-control label {
+.generic-form-wrapper .input-control label {
   margin-bottom: 1rem;
   color: #202124;
 }
 
-.news-form .input-control input, textarea {
+.generic-form-wrapper .input-control input, textarea {
   height: 2.5rem;
   padding-left: 0.5rem;
   outline: none;
@@ -717,7 +723,7 @@ span:hover {
   color: var(--gray-600);
 }
 
-.news-form .input-control #banner-input-file {
+.generic-form-wrapper .input-control #banner-input-file {
     opacity: 0;
     width: 0.1px;
     height: 0.1px;
@@ -734,7 +740,7 @@ span:hover {
   background-position: center;
 }
 
-.news-form .input-control.drop-zone {
+.generic-form-wrapper .input-control.drop-zone {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -752,16 +758,16 @@ span:hover {
   transition: border 0.5s;
 }
 
-.news-form .input-control.drop-zone label {
+.generic-form-wrapper .input-control.drop-zone label {
   margin: 0;
 }
 
 
-.news-form .input-control{
+.generic-form-wrapper .input-control{
   font-size: 1.2rem;
 }
 
-.news-form button {
+.generic-form-wrapper button {
   font-size: 1.2rem;
   color: var(--white-200);
 
@@ -778,7 +784,7 @@ span:hover {
   border: 0;
 }
 
-.news-form button:hover{
+.generic-form-wrapper button:hover{
   filter: brightness(0.75);
 }
 

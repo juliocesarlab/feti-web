@@ -24,10 +24,11 @@ Route::get('/noticias/{id}', [NewsController::class, 'getOne']);
 /* partners dashboard */
 
 Route::get('/dashboard/parceiros', [PartnersController::class, 'index'])->middleware(['auth']);
+Route::get('/dashboard/parceiros/create', [PartnersController::class, 'create'])->middleware(['auth']);
+Route::post('/dashboard/parceiros/create', [PartnersController::class, 'store'])->middleware(['auth']);
 
 
 /* dashboard */
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
