@@ -17,14 +17,6 @@ class NewsController extends Controller
       return view('news.news-dashboard',  ['news' => $news]);
     }
 
-    public function preview() {
-      $news = News::all()
-              ->sortByDesc('created_at')
-              ->take(2);
-
-      return view('index', ['news' => $news]);
-    }
-
     public function getOne($id) {
       $news = News::findOrFail($id);
       return view('news.single-news', ['news' => $news]);

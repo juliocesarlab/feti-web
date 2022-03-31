@@ -87,23 +87,18 @@
       @if(count($news) >= 2) 
         <a href="/noticias" class="regular-link">Veja mais notícias</a>
       @endif
-      <section class="partners">
+      <section class="partners" id="parceiros">
         <div class="section-heading">
           <h1 class="section-title">Parceiros</h1>
         </div>
 
         <div class="swiper">
           <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                  <img src="images/part1.png" alt="parceiro">
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/part2.png" alt="parceiro">
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/part3.png" alt="parceiro">
-                </div>
+            @foreach($partners as $partner)
+            <div class="swiper-slide">
+                <img src="images/partners/{{$partner->image}}" alt="{{$partner->name}}" title="{{$partner->name}}">
               </div>
+            @endforeach
         </div>
       </section>
 @endsection

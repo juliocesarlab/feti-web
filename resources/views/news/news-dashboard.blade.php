@@ -2,7 +2,7 @@
 
 @section('title', 'Dashboard - Notícias')
 @section('content')
-  <div class="news-dashboard">
+  <div class="dashboard-option-container">
     <div class="dashboard-heading">
       <a href="/noticias" target="_blank"><h1>Noticias</h1></a>
       <div>
