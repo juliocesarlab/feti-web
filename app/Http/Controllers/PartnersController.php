@@ -43,4 +43,45 @@ class PartnersController extends Controller
     return redirect('/dashboard/parceiros');
   }
 
+  public function edit($id) {
+    $partner = Partner::findOrFail($id);
+    
+    return view('partners.edit-partner', ['partner' => $partner]);
+  }
+
+  public function Update(Request $request,$id) {
+    $partner = Partner::findOrFail($id);
+
+    $partner->name = $request->name;
+
+    if($request->hasFile('banner') && $request->file('banner')->isValid()) {
+
+      unlink('images/partners/'.$partner->image);
+      
+      $requestImage = $request->banner;
+
+      $extension = $requestImage->extension();
+
+      $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+      $requestImage->move(public_path('images/partners'), $imageName);
+
+      $partner->image = $imageName;
+    }
+
+    $partner->save();
+
+    return redirect('/dashboard/parceiros');
+  }
+
+  public function destroy($id) {
+    $partner = Partner::findOrFail($id);
+      $isDeleted = Partner::destroy($id);
+
+      if ($isDeleted) {
+        unlink('images/partners/'.$partner->image);
+        return redirect('/dashboard/parceiros');
+      }
+  }
+
 }

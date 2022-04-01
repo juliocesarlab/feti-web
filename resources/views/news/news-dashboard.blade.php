@@ -27,7 +27,7 @@
               <p title="{{$n->short_desc}}">{{ substr($n->short_desc, 0, 45). '...' }}</p>
             </a>
           </div>
-          <div class="news-row-options">
+          <div class="row-options">
             <a href="/dashboard/noticias/edit/{{$n->id}}">Editar</a>
             <a href="/dashboard/noticias/destroy/{{$n->id}}">Apagar</a>
           </div>

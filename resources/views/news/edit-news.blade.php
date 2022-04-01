@@ -4,7 +4,7 @@
 
 @section('content')
 
-<section class="news-form">
+<section class="news-form generic-form-wrapper">
    <form action="/dashboard/noticias/edit/{{$news->id}}" method="POST" enctype="multipart/form-data" id="editForm">
       @csrf
 

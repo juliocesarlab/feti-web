@@ -26,7 +26,7 @@
         </a>
         <form action="/logout" method="POST">
           <a href="/logout" 
-            class="logout-link"
+            class="logout-link danger-text"
             onclick="event.preventDefault(); this.closest('form').submit();" 
           >
             @csrf

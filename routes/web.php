@@ -26,6 +26,9 @@ Route::get('/noticias/{id}', [NewsController::class, 'getOne']);
 Route::get('/dashboard/parceiros', [PartnersController::class, 'index'])->middleware(['auth']);
 Route::get('/dashboard/parceiros/create', [PartnersController::class, 'create'])->middleware(['auth']);
 Route::post('/dashboard/parceiros/create', [PartnersController::class, 'store'])->middleware(['auth']);
+Route::get('/dashboard/parceiros/edit/{id}', [PartnersController::class, 'edit'])->middleware(['auth']);
+Route::post('/dashboard/parceiros/edit/{id}', [PartnersController::class, 'update'])->middleware(['auth']);
+Route::get('/dashboard/parceiros/destroy/{id}', [PartnersController::class, 'destroy'])->middleware(['auth']);
 
 
 /* dashboard */
