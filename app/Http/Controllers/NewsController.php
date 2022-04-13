@@ -8,12 +8,25 @@ use App\Models\News;
 class NewsController extends Controller
 {
     public function index() {
+      $search = request('search');
+
+      if($search) {
+        $news = News::where([
+          ['title', 'like', '%'.$search.'%']
+        ])
+        ->get()
+        ->sortByDesc('created_at');
+      } 
+      else {
         $news = News::all()->sortByDesc('created_at');
-        return view('news.news',  ['news' => $news]);
+      }
+      
+      return view('news.news',  ['news' => $news, 'search' => $search]);
     }
 
     public function getAll() {
       $news = News::all();
+
       return view('news.news-dashboard',  ['news' => $news]);
     }
 

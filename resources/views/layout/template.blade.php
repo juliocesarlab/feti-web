@@ -64,8 +64,13 @@
 
           <div class="search-area">
             <div class="search-wrapper">
-              <input type="text" placeholder="O que você procura ?">
-              <span class="search-icon"><i class="fas fa-search"></i></span>
+              <form action="/noticias" method="GET" id="search-news-form">
+                @csrf
+                <input type="text" placeholder="O que você procura ?" name="search">
+                <span class="search-icon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </form>
             </div>
           </div>
         </section>

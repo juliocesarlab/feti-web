@@ -9,8 +9,11 @@
         </div>
 
         <div class="section-body">
+        @if($search) 
+            <h2>{{count($news)}} resultado(s) encontrados para  <b>"{{$search}}"</b></h2>
+         @endif
 
-         @if(count($news) === 0) 
+         @if(count($news) === 0 && !$search) 
            <p style="min-height: 12vh;">Não há notícias ainda, volte mais tarde.</p>
          @endif
 

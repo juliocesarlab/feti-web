@@ -297,6 +297,10 @@ span:hover {
   transform: scale(1.1);
 }
 
+section.news {
+  min-height: 20vh;
+}
+
 .news .section-body {
   width: 100%;
   display: flex;
