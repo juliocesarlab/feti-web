@@ -8,8 +8,21 @@ use App\Http\Controllers\PartnersController;
 use App\Http\Controllers\GenericsController;
 use App\Http\Controllers\BannersController;
 
+/* generics routes */
+
 Route::get('/', [GenericsController::class, 'index']);
+
+Route::get('/sobre-nos', [GenericsController::class, function() {
+  return view('about.index');
+}]);
+
 Route::get('/editais', [GenericsController::class, 'edicts']);
+
+Route::get('/contato', function() {
+  return view('contact.index');
+});
+
+
 
 /* news dashboard */
 

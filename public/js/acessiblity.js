@@ -38,10 +38,10 @@ function setDarkTheme() {
   })
 
   document.querySelectorAll('.section-title').forEach(title => title.style.color = '#fff')
-  document.querySelectorAll('a, i, p').forEach(text => text.style.color = '#fff')
+  document.querySelectorAll('a, i, p, h2, h3').forEach(text => text.style.color = '#fff')
   document.querySelectorAll('.logo-area, .search-area').forEach(header => header.style.backgroundColor = '#171717')
 
-  const footerArea = document.querySelector('.address')
+  const footerArea = document.querySelector('section.address')
   footerArea.style.backgroundColor = '#171717'
 
   const news = document.querySelectorAll('.news-details')
@@ -61,13 +61,14 @@ function resetTheme() {
     children.forEach(children => children.style.color = '#001859')
   })
 
-  document.querySelectorAll('.section-title, a, i, p').forEach(title => title.style.color = '#001859')
+  document.querySelectorAll('.section-title, a, i, p, .card>h2, article>h2').forEach(title => title.style.color = '#001859')
+  document.querySelectorAll('.card>h3').forEach(title => title.style.color = '#00216c')
 
   const headerArea = document.querySelectorAll('.logo-area, .search-area')
   headerArea[0].style.backgroundColor = '#001859'
   headerArea[1].style.backgroundColor = '#00216c'
 
-  const footerArea = document.querySelectorAll('.contacts, .address')
+  const footerArea = document.querySelectorAll('.contacts, section.address')
   footerArea[0].style.backgroundColor = '#00216c'
   footerArea[1].style.backgroundColor = '#001859'
 
