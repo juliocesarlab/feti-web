@@ -91,6 +91,18 @@ function resetTheme() {
     })
   })
 
+  const socialMedia = document.querySelector('.social-media')
+  socialMedia.style.backgroundColor = 'var(--white-200)'
+  const socialMediaIcons = [...socialMedia.children[0].children]
+
+  console.log(socialMediaIcons)
+
+  socialMediaIcons.forEach(icon => {
+    icon.children[0].style.color = 'var(--blue-600)'
+  })
+
+
+
   localStorage.setItem('theme', 'light')
 }
 

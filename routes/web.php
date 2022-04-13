@@ -6,8 +6,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PartnersController;
 use App\Http\Controllers\GenericsController;
+use App\Http\Controllers\BannersController;
 
 Route::get('/', [GenericsController::class, 'index']);
+Route::get('/editais', [GenericsController::class, 'edicts']);
 
 /* news dashboard */
 
@@ -29,6 +31,15 @@ Route::post('/dashboard/parceiros/create', [PartnersController::class, 'store'])
 Route::get('/dashboard/parceiros/edit/{id}', [PartnersController::class, 'edit'])->middleware(['auth']);
 Route::post('/dashboard/parceiros/edit/{id}', [PartnersController::class, 'update'])->middleware(['auth']);
 Route::get('/dashboard/parceiros/destroy/{id}', [PartnersController::class, 'destroy'])->middleware(['auth']);
+
+/* Banners dashboard */
+
+Route::get('/dashboard/banners', [BannersController::class, 'index'])->middleware(['auth']);
+Route::get('/dashboard/banners/create', [BannersController::class, 'create'])->middleware(['auth']);
+Route::post('/dashboard/banners/create', [BannersController::class, 'store'])->middleware(['auth']);
+Route::get('/dashboard/banners/edit/{id}', [BannersController::class, 'edit'])->middleware(['auth']);
+Route::post('/dashboard/banners/edit/{id}', [BannersController::class, 'update'])->middleware(['auth']);
+Route::get('/dashboard/banners/destroy/{id}', [BannersController::class, 'destroy'])->middleware(['auth']);
 
 
 /* dashboard */

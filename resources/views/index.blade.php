@@ -44,17 +44,22 @@
         </div>
       </section>
 
-      <section class="slider-section">
-        <div class="slideshow-container">
-          <div class="slide">
-            <img src="images/banner.jpg" >
-          </div>
-          <div class="slide">
-            <img src="images/caixa.jpg" >
-          </div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </section>
+        @if(count($banners) != 0)
+        <section class="slider-section" id="banners">
+          <div class="slideshow-container">
+            @foreach($banners as $banner)
+              <a href="{{$banner->link}}" title="{{$banner->title}}" target="_blank">
+                <div class="slide">
+                  <img src="images/banners/{{$banner->image}}" >
+                </div>
+              </a>
+            @endforeach
+            @if(count($banners) > 1)
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            @endif
+        </section>
+        @endif
 
       <section class="news">
         <div class="section-heading">
@@ -91,6 +96,10 @@
         <div class="section-heading">
           <h1 class="section-title">Parceiros</h1>
         </div>
+
+        @if(count($partners) == 0) 
+          <p style="min-height: fit-content; font-size: 1.5rem;">Não há parceiros ainda.</p>
+        @endif
 
         <div class="swiper">
           <div class="swiper-wrapper">
