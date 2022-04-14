@@ -61,6 +61,7 @@ function resetTheme() {
     children.forEach(children => children.style.color = '#001859')
   })
 
+
   document.querySelectorAll('.section-title, a, i, p, .card>h2, article>h2').forEach(title => title.style.color = '#001859')
   document.querySelectorAll('.card>h3').forEach(title => title.style.color = '#00216c')
 
@@ -78,6 +79,7 @@ function resetTheme() {
   abClickable.forEach(item => item.style.color = '#fff')
 
   document.querySelectorAll('i').forEach(icon => icon.style.color = '#fff')
+  document.querySelector('.close-menu-button>i').style.color = '#00216c'
 
   const news = document.querySelectorAll('.news-details')
   news.forEach(news => {
