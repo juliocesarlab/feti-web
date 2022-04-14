@@ -137,8 +137,8 @@
               <i class="fas fa-phone-alt"></i>
             </div>
             <div class="details">
-              <h2 class="tel-number">0800 940 0101</h2>
-              <h3 class="tel-name">Todos por Uberaba</h3>
+              <h2 class="tel-number">0800 940 3160</h2>
+              <h3 class="tel-name">Saúde atende</h3>
             </div>
           </div>
 
@@ -147,8 +147,8 @@
               <i class="fas fa-phone-alt"></i>
             </div>
             <div class="details">
-              <h2 class="tel-number">0800 940 0101</h2>
-              <h3 class="tel-name">Todos por Uberaba</h3>
+              <h2 class="tel-number">156</h2>
+              <h3 class="tel-name">Ouvidoria-geral</h3>
             </div>
           </div>
         </div>
