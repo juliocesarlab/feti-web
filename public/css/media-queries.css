@@ -82,6 +82,10 @@
     align-items: flex-start;
   }
 
+  .news-details h3 {
+    font-size: 1.5rem;
+  }
+
   .news.news-page .section-body .news-card {
     flex-direction: column;
     height: 500px;
