@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{asset('css/slider.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/media-queries.css')}}">
+    <link rel="icon" href="{{asset('images/logo-2.png')}}">
 
     <title>@yield('title')</title>
   </head>
