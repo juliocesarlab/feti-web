@@ -30,7 +30,7 @@
             <a href="/editais" class="link">Editais</a>
             <a href="https://leismunicipais.com.br/a/mg/u/uberaba/decreto/2018/149/1489/decreto-n-1489-2018-aprova-o-estatuto-da-fundacao-de-ensino-tecnico-intensivo-dr-rene-barsam-feti-de-que-trata-a-lei-complementar-n-490-de-01-de-junho-2015-e-da-outras-providencias"
              target="_blank"  class="link">Legislação</a>
-            <a href="/docs/colaboradores-feti.pdf"  class="link" target="_blank">Quadro Colaborativo</a>
+            <a href="/docs/colaboradores-feti-2022.pdf"  class="link" target="_blank">Quadro Colaborativo</a>
             <a href="/docs/quemequem.pdf" target="_blank" class="link">Quem é quem</a>
             <a href="http://www.uberaba.mg.gov.br/portal/conteudo,40337" class="link" target="_blank">Acesso à informação</a>
             <a href="/contato" class="link">Contato</a>
