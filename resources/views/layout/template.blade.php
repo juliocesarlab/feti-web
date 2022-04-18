@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/media-queries.css')}}">
     <link rel="icon" href="{{asset('images/logo-2.png')}}">
-
+    <meta name="description" content="FETI - Iniciação profissional em Uberaba - MG. A FETI – Fundação de Ensino Técnico Intensivo “Dr. Renê Barsam” é uma Fundação Pública Municipal, criada pela lei Municipal nº 2448, de 28 de abril de 1975 e reestruturada pela Lei Delegada nº 008/2005, de 24 de dezembro de 2005, vinculada estruturalmente, à Secretaria Municipal de Educação e Cultura. A Fundação de Ensino Técnico Intensivo - FETI tem por finalidade promover a habilitação e qualificação profissional de jovens e adultos, a formação e o aperfeiçoamento de servidores públicos municipais, bem como, a elaboração e o desenvolvimento de projetos no âmbito da educação técnica, da especialização e qualificação para o trabalho, ciência e tecnologia, em consonância com as políticas estabelecidas pelo Município. ">
     <title>@yield('title')</title>
   </head>
   <body>
